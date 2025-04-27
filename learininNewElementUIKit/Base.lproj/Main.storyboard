@@ -32,21 +32,30 @@ This class supports multiple text styles through use of the attributedText prope
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-Uj-SCo">
+                                <rect key="frame" x="279" y="81" width="94" height="32"/>
+                                <connections>
+                                    <action selector="sizeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="uVL-bc-Gld"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="jLH-QK-sUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1JT-hE-hHP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X0N-Uj-SCo" secondAttribute="trailing" constant="20" id="6Sp-ub-iNs"/>
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OSK-Aj-Af4"/>
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Rlf-RJ-aky"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mLI-kj-e1S" secondAttribute="trailing" constant="341" id="Tla-cM-F86"/>
                             <constraint firstItem="jLH-QK-sUh" firstAttribute="top" secondItem="mLI-kj-e1S" secondAttribute="bottom" constant="44" id="dr6-Gk-jBo"/>
+                            <constraint firstItem="X0N-Uj-SCo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="joO-YP-w23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLH-QK-sUh" secondAttribute="trailing" constant="16" id="mlH-Wn-A2s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jLH-QK-sUh" secondAttribute="bottom" constant="180" id="x3u-Oh-gdY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="mLI-kj-e1S" id="EtD-hs-zVz"/>
+                        <outlet property="stepper" destination="X0N-Uj-SCo" id="66S-NS-VO1"/>
                         <outlet property="textView" destination="jLH-QK-sUh" id="5SY-qt-Nl3"/>
                         <outlet property="textViewBottomConstraints" destination="x3u-Oh-gdY" id="zaG-1Q-y2A"/>
                     </connections>
