@@ -16,7 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textView.delegate = self
-        textView.text = ""
+
+        textView.isHidden = true
+        textView.alpha = 0
         
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.backgroundColor = self.view.backgroundColor
@@ -30,16 +32,30 @@ class ViewController: UIViewController {
         stepper.backgroundColor = .gray
         stepper.layer.cornerRadius = 5
         
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        activityIndicator.startAnimating()
+        
+        
+        //Отслеживаем появление клавиатуры
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
                                                name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
+        //Отслеживаем скрытие клавиатуры
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTextView(notification:)),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
+        
+        UIView.animate(withDuration: 0, delay: 3, animations: {
+            self.textView.alpha = 1
+        }) { (finished) in
+            self.activityIndicator.stopAnimating()
+            self.textView.isHidden = false
+        }
     }
-    
+    // скрытие клавиатуры по клику за пределами Text view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
