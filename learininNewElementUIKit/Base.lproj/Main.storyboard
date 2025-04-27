@@ -41,17 +41,23 @@ This class supports multiple text styles through use of the attributedText prope
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-e0-9li">
                                 <rect key="frame" x="186.66666666666666" y="381.66666666666669" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="irs-Pj-Hh6">
+                                <rect key="frame" x="18" y="145" width="357" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="jLH-QK-sUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1JT-hE-hHP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X0N-Uj-SCo" secondAttribute="trailing" constant="20" id="6Sp-ub-iNs"/>
+                            <constraint firstItem="irs-Pj-Hh6" firstAttribute="centerX" secondItem="jLH-QK-sUh" secondAttribute="centerX" id="98H-nJ-2vM"/>
+                            <constraint firstItem="irs-Pj-Hh6" firstAttribute="top" secondItem="jLH-QK-sUh" secondAttribute="top" id="CmX-Nz-KnP"/>
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OSK-Aj-Af4"/>
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Rlf-RJ-aky"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mLI-kj-e1S" secondAttribute="trailing" constant="341" id="Tla-cM-F86"/>
                             <constraint firstItem="AiL-e0-9li" firstAttribute="centerY" secondItem="jLH-QK-sUh" secondAttribute="centerY" id="UdP-ca-PqR"/>
                             <constraint firstItem="jLH-QK-sUh" firstAttribute="top" secondItem="mLI-kj-e1S" secondAttribute="bottom" constant="44" id="dr6-Gk-jBo"/>
+                            <constraint firstItem="irs-Pj-Hh6" firstAttribute="width" secondItem="jLH-QK-sUh" secondAttribute="width" multiplier="0.98892" id="hce-uQ-CYv"/>
                             <constraint firstItem="X0N-Uj-SCo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="joO-YP-w23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLH-QK-sUh" secondAttribute="trailing" constant="16" id="mlH-Wn-A2s"/>
                             <constraint firstItem="AiL-e0-9li" firstAttribute="centerX" secondItem="jLH-QK-sUh" secondAttribute="centerX" id="som-PZ-069"/>
@@ -61,6 +67,7 @@ This class supports multiple text styles through use of the attributedText prope
                     <connections>
                         <outlet property="activityIndicator" destination="AiL-e0-9li" id="gC2-Xb-ULW"/>
                         <outlet property="countLabel" destination="mLI-kj-e1S" id="EtD-hs-zVz"/>
+                        <outlet property="progressView" destination="irs-Pj-Hh6" id="4eG-ru-2AT"/>
                         <outlet property="stepper" destination="X0N-Uj-SCo" id="66S-NS-VO1"/>
                         <outlet property="textView" destination="jLH-QK-sUh" id="5SY-qt-Nl3"/>
                         <outlet property="textViewBottomConstraints" destination="x3u-Oh-gdY" id="zaG-1Q-y2A"/>
