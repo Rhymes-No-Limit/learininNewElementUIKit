@@ -10,6 +10,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textView.delegate = self
+        textView.text = ""
         
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
         textView.backgroundColor = self.view.backgroundColor
@@ -64,5 +65,11 @@ extension ViewController: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         textView.backgroundColor = self.view.backgroundColor
         textView.textColor = .black
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        countLabel.text = "\(textView.text.count)"
+
+        return textView.text.count + (text.count - range.length) <= 60
     }
 }
