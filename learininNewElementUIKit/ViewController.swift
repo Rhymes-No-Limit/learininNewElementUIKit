@@ -1,17 +1,13 @@
-//
-//  ViewController.swift
-//  learininNewElementUIKit
-//
-//  Created by Андрей Терентьев on 27.04.2025.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var countLabel: UILabel!
+    @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
 
