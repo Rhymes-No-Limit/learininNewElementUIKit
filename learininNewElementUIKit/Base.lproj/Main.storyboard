@@ -19,9 +19,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jLH-QK-sUh">
                                 <rect key="frame" x="16" y="145" width="361" height="493"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">UITextView supports the display of text using custom style information and also supports text editing. You typically use a text view to display multiple lines of text, such as when displaying the body of a large text document.
+                                <string key="text">UITextView supports the display of text using custom style information and also supports text editing. You typically use a text view to display multiple lines of text, such as when displaying the body of a large text document.
 This class supports multiple text styles through use of the attributedText property. (Styled text isn’t supported in versions of iOS earlier than iOS 6.) Setting a value for this property causes the text view to use the style information provided in the attributed string. You can still use the font, textColor, and textAlignment properties to set style attributes, but those properties apply to all of the text in the text view. It’s recommended that you use a text view—and not a UIWebView object—to display both plain and rich text in your app.
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -38,6 +38,9 @@ This class supports multiple text styles through use of the attributedText prope
                                     <action selector="sizeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="uVL-bc-Gld"/>
                                 </connections>
                             </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-e0-9li">
+                                <rect key="frame" x="186.66666666666666" y="381.66666666666669" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -47,13 +50,16 @@ This class supports multiple text styles through use of the attributedText prope
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OSK-Aj-Af4"/>
                             <constraint firstItem="mLI-kj-e1S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="Rlf-RJ-aky"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="mLI-kj-e1S" secondAttribute="trailing" constant="341" id="Tla-cM-F86"/>
+                            <constraint firstItem="AiL-e0-9li" firstAttribute="centerY" secondItem="jLH-QK-sUh" secondAttribute="centerY" id="UdP-ca-PqR"/>
                             <constraint firstItem="jLH-QK-sUh" firstAttribute="top" secondItem="mLI-kj-e1S" secondAttribute="bottom" constant="44" id="dr6-Gk-jBo"/>
                             <constraint firstItem="X0N-Uj-SCo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="joO-YP-w23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLH-QK-sUh" secondAttribute="trailing" constant="16" id="mlH-Wn-A2s"/>
+                            <constraint firstItem="AiL-e0-9li" firstAttribute="centerX" secondItem="jLH-QK-sUh" secondAttribute="centerX" id="som-PZ-069"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jLH-QK-sUh" secondAttribute="bottom" constant="180" id="x3u-Oh-gdY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="AiL-e0-9li" id="gC2-Xb-ULW"/>
                         <outlet property="countLabel" destination="mLI-kj-e1S" id="EtD-hs-zVz"/>
                         <outlet property="stepper" destination="X0N-Uj-SCo" id="66S-NS-VO1"/>
                         <outlet property="textView" destination="jLH-QK-sUh" id="5SY-qt-Nl3"/>

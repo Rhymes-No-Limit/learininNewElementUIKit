@@ -7,6 +7,11 @@ class ViewController: UIViewController {
     
     @IBOutlet var stepper: UIStepper!
     @IBOutlet var textViewBottomConstraints: NSLayoutConstraint!
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
