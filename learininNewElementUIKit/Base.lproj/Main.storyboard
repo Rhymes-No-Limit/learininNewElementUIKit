@@ -48,6 +48,7 @@ This class supports multiple text styles through use of the attributedText prope
                     <connections>
                         <outlet property="countLabel" destination="mLI-kj-e1S" id="EtD-hs-zVz"/>
                         <outlet property="textView" destination="jLH-QK-sUh" id="5SY-qt-Nl3"/>
+                        <outlet property="textViewBottomConstraints" destination="x3u-Oh-gdY" id="zaG-1Q-y2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
